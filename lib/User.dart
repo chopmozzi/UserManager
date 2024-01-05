@@ -3,7 +3,6 @@ enum UserType {
 }
 
 class User {
-  int id;
   String name;
   int phoneNumber;
   int lessonCount;
@@ -11,7 +10,6 @@ class User {
   UserType type;
 
   User({
-    required this.id,
     required this.name,
     required this.phoneNumber,
     required this.lessonCount,
@@ -21,7 +19,6 @@ class User {
 
   Map<String, dynamic> toMap() {
     return {
-      'id': id,
       'name': name,
       'phoneNumber': phoneNumber,
       'lessonCount': lessonCount,
@@ -32,7 +29,6 @@ class User {
 
   factory User.fromMap(Map<String, dynamic> map) {
     return User(
-      id: map['id'],
       name: map['name'],
       phoneNumber: map['phoneNumber'],
       lessonCount: map['lessonCount'],
